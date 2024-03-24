@@ -8,7 +8,7 @@ on:
 env:
   AWS_ACCESS_KEY: ${{ secrets.AWS_ACCESS_KEY_ID }}
   AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-  AWS_REGION: eu-west-3
+  AWS_REGION: ca-central-1
   TF_VAR_apex_domain: jeromedecoster.net
 
 defaults:
@@ -23,7 +23,9 @@ jobs:
       uses: actions/checkout@v2
 
     - name: Setup Terraform
-      uses: hashicorp/setup-terraform@v1.1.0
+      uses: hashicorp/setup-terraform@v3
+      with:
+        terraform_version: "1.1.7"
 
     - name: Terraform Init
       timeout-minutes: 2
