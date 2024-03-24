@@ -9,6 +9,7 @@ env:
   AWS_ACCESS_KEY: ${{ secrets.AWS_ACCESS_KEY_ID }}
   AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
   AWS_REGION: ca-central-1
+  ACTIONS_ALLOW_UNSECURE_COMMANDS: true
   TF_VAR_apex_domain: jeromedecoster.net
 
 defaults:
