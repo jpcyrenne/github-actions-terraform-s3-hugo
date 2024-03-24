@@ -20,10 +20,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Clone
-      uses: actions/checkout@v3
+      uses: actions/checkout@v2
 
     - name: Setup Terraform
-      uses: hashicorp/setup-terraform@v1.1.7
+      uses: hashicorp/setup-terraform@v1.6.0
 
     - name: Terraform Init
       timeout-minutes: 2
